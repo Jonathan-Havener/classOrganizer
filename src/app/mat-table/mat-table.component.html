@@ -7,7 +7,9 @@
             <label for="file">Choose File</label>
             <input type="file"
                    id="file"
-                   (change)="handleFileInput($event.target.files)">
+                   (change)="handleFileInput($event.target.files)"
+                   multiple>
+            <input type="submit" value="Send files" (click)="test()">
         </div>
     </mat-card>
 
@@ -35,6 +37,10 @@
                 </div>
             </div>
         </div>
+    </mat-card>
+
+    <mat-card>
+        <button (click)="downloadCSV()">download</button>
     </mat-card>
     
 </div>
